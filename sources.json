@@ -1,0 +1,29 @@
+{
+  "site": { "name": "Game Audio Jobs", "url": "", "verification": "jHGDuf7vndmoHAYF0z2J-8fbIdiqUQPOLxNXKIT1QVU" },
+  "match": "\\b(audio|sound|music|musician|composer|foley|wwise|fmod|dialogue|voice ?over|vo designer|voice designer|acoustic)",
+  "sources": [
+    { "ats": "greenhouse", "slug": "sonyinteractiveentertainmentglobal", "company": "PlayStation Studios" },
+    { "ats": "greenhouse", "slug": "epicgames", "company": "Epic Games" },
+    { "ats": "greenhouse", "slug": "riotgames", "company": "Riot Games" },
+    { "ats": "greenhouse", "slug": "2k", "company": "2K" },
+    { "ats": "greenhouse", "slug": "firaxis", "company": "Firaxis Games" },
+    { "ats": "greenhouse", "slug": "cloudchamberen", "company": "Cloud Chamber" },
+    { "ats": "greenhouse", "slug": "hoyoverse", "company": "HoYoverse" },
+    { "ats": "greenhouse", "slug": "digitalextremes", "company": "Digital Extremes" },
+    { "ats": "greenhouse", "slug": "bonfirestudiosinc", "company": "Bonfire Studios" },
+    { "ats": "greenhouse", "slug": "eleventhhourgames", "company": "Eleventh Hour Games" },
+    { "ats": "greenhouse", "slug": "absurdventures", "company": "Absurd Ventures" },
+    { "ats": "greenhouse", "slug": "gsgcareers", "company": "Ghost Story Games" },
+    { "ats": "greenhouse", "slug": "gravitywell", "company": "Gravity Well" },
+    { "ats": "greenhouse", "slug": "housemarque", "company": "Housemarque" },
+    { "ats": "greenhouse", "slug": "teamlfg", "company": "teamLFG" },
+    { "ats": "greenhouse", "slug": "1047games", "company": "1047 Games" },
+    { "ats": "greenhouse", "slug": "roblox", "company": "Roblox" },
+    { "ats": "greenhouse", "slug": "bungie", "company": "Bungie" },
+    { "ats": "lever", "slug": "kabam", "company": "Kabam" },
+    { "ats": "lever", "slug": "larian", "company": "Larian Studios" },
+    { "ats": "ashby", "slug": "hoyoverse", "company": "HoYoverse" },
+    { "ats": "ashby", "slug": "thatgamecompany", "company": "thatgamecompany" },
+    { "ats": "ashby", "slug": "voodoo", "company": "Voodoo" }
+  ]
+}

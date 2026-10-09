@@ -60,7 +60,7 @@ ${body}
       const all = NORMALIZE[src.ats](await fetchSource(src));
       ok++;
       const hits = all.filter(j => j.title && AUDIO.test(j.title) && httpsOnly(j.url));
-      hits.forEach(j => jobs.push({ ...j, company: src.company, date: day(j.date) }));
+      hits.forEach(j => jobs.push({ ...j, location: String(j.location || '').replace(/\bBLANK,\s*/g, '').trim(), company: src.company, date: day(j.date) }));
       report.push(`${src.ats}:${src.slug} ok ${all.length} jobs, ${hits.length} audio`);
     } catch (e) { report.push(`${src.ats}:${src.slug} FAILED ${e.message}`); }
   }

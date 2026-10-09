@@ -1,5 +1,5 @@
 {
-  "site": { "name": "Game Audio Jobs", "url": "", "verification": "jHGDuf7vndmoHAYF0z2J-8fbIdiqUQPOLxNXKIT1QVU" },
+  "site": { "name": "Game Audio Jobs", "url": "https://strong-tulumba-741891.netlify.app", "verification": "jHGDuf7vndmoHAYF0z2J-8fbIdiqUQPOLxNXKIT1QVU" },
   "match": "\\b(audio|sound|music|musician|composer|foley|wwise|fmod|dialogue|voice ?over|vo designer|voice designer|acoustic)",
   "sources": [
     { "ats": "greenhouse", "slug": "sonyinteractiveentertainmentglobal", "company": "PlayStation Studios" },

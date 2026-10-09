@@ -41,13 +41,14 @@ const page = (path, title, desc, body) => `<!doctype html>
 <title>${esc(title)}</title>
 <meta name="description" content="${esc(desc)}">
 ${site.verification ? `<meta name="google-site-verification" content="${esc(site.verification)}" />\n` : ''}${site.url ? `<link rel="canonical" href="${site.url}${path}">\n` : ''}<link rel="stylesheet" href="/style.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8267973935350100" crossorigin="anonymous"></script>
 </head>
 <body>
 <header><a href="/">${esc(site.name)}</a></header>
 <main>
 ${body}
 </main>
-<footer>Listings come directly from each studio's public careers page and link to the official posting. Always apply through the studio.</footer>
+<footer>Listings come directly from each studio's public careers page and link to the official posting. Always apply through the studio. Some links are affiliate links: if you buy through them, we may earn a commission at no extra cost to you.</footer>
 </body>
 </html>
 `;
@@ -74,6 +75,7 @@ ${body}
   fs.rmSync(OUT, { recursive: true, force: true });
   fs.mkdirSync(OUT, { recursive: true });
   fs.copyFileSync('style.css', `${OUT}/style.css`);
+  fs.writeFileSync(`${OUT}/ads.txt`, 'google.com, pub-8267973935350100, DIRECT, f08c47fec0942fa0\n');
   const updated = new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'America/New_York' });
   const rows = list.map(j => `<li><a href="${esc(j.url)}" rel="nofollow noopener" target="_blank">${esc(j.title)}</a><span>${esc(j.company)}${j.location ? ' · ' + esc(j.location) : ''}${j.date ? ' · posted ' + esc(j.date) : ''}</span></li>`).join('\n');
   fs.writeFileSync(`${OUT}/index.html`, page('/', `${site.name}: Sound Design, Audio and Music Jobs at Game Studios`,
@@ -82,6 +84,8 @@ ${body}
 <p>Open sound design, audio, music and dialogue roles at game studios, pulled straight from each studio's careers page. Every link goes to the official posting.</p>
 <p class="meta">${list.length} open role${list.length === 1 ? '' : 's'} · ${studios.length} studio${studios.length === 1 ? '' : 's'} hiring · updated ${updated}</p>
 ${list.length ? `<ul class="list">\n${rows}\n</ul>` : '<p>No open audio roles at the studios we track right now. Check back tomorrow.</p>'}
+<div class="promo">Building your audio rig? Shop headphones, audio interfaces, mics and studio monitors at <a href="https://www.zzounds.com/a--4000097" rel="sponsored nofollow noopener" target="_blank">zZounds</a>, with no-interest payment plans on a lot of gear.</div>
+<p class="tip">Waiting on a dream studio? A free browser tool like <a href="https://harpa.ai?fpr=flyjck" rel="sponsored nofollow noopener" target="_blank">HARPA AI</a> can watch their careers page and alert you when it changes.</p>
 <h2>Studios we check every day</h2>
 <p class="meta">${esc([...new Set(sources.map(s => s.company))].sort().join(' · '))}</p>`));
   if (site.url) {
